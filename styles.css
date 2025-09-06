@@ -117,4 +117,24 @@ a:hover{opacity:.9;text-decoration:underline}
   .footer-grid{grid-template-columns:1fr}
   .site-nav{display:none;position:absolute;right:1rem;top:64px;background:#0b0f1a;border:1px solid var(--stroke);border-radius:1rem;padding:.6rem;flex-direction:column;gap:.2rem}
   .nav-toggle{display:inline-flex;align-items:center;gap:.5rem;border-radius:.6rem;border:1px solid var(--stroke);background:transparent;color:var(--text);padding:.5rem .7rem}
+/* ...mantém o topo igual ao que enviei antes... */
+
+/* Botão com contraste no header já existe */
+.site-header .btn.contrast{background:#fff;border-color:#fff;color:#0b0f1a}
+.site-header .btn.contrast:hover{filter:brightness(.94)}
+
+/* Linha de ações nos cards (dois botões lado a lado) */
+.card .actions{
+  margin-top:auto;
+  display:flex;
+  gap:.5rem;
+  flex-wrap:wrap;
 }
+.card .actions .btn{margin-top:0}
+
+/* Opcional: leve destaque nos botões de WhatsApp (continua no tema branco) */
+.btn.whatsapp{border-color:rgba(255,255,255,.45)}
+.btn.whatsapp:hover{background:rgba(255,255,255,.12);color:#fff}
+
+/* ...restante do CSS igual ao anterior... */
+
