@@ -1,5 +1,4 @@
 :root{
-  /* fundo permanece escuro, accent agora é BRANCO */
   --bg:#0b0f1a;
   --bg-soft:#0f1424;
   --text:#e7e9ee;
@@ -16,14 +15,13 @@ html,body{margin:0;padding:0}
 body{
   font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
   background:linear-gradient(180deg,var(--bg) 0,var(--bg-soft) 100%);
-  color:var(--text);
-  line-height:1.55;
+  color:var(--text); line-height:1.55;
 }
 img{max-width:100%;display:block}
 a{color:var(--brand);text-decoration:none}
 a:hover{opacity:.9;text-decoration:underline}
 .container{width:min(1120px,92vw);margin:0 auto}
-.skip{position:absolute;left:-9999px;top:auto}
+.skip{position:absolute;left:-9999px}
 .skip:focus{left:1rem;top:1rem;background:#000;color:#fff;padding:.5rem .75rem;border-radius:.5rem;z-index:1000}
 
 /* HEADER */
@@ -32,13 +30,20 @@ a:hover{opacity:.9;text-decoration:underline}
 .brand a{display:flex;align-items:center;gap:.6rem;font-weight:700;color:var(--text);text-decoration:none}
 .brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:#ffffff;color:#0b0f1a;font-weight:900;box-shadow:var(--shadow);letter-spacing:.5px}
 .brand-text{letter-spacing:.2px}
+
+/* NAV */
 .site-nav{display:flex;align-items:center;gap:1rem}
-.site-nav a{padding:.5rem .6rem;color:var(--text);opacity:.85;text-decoration:none;border-radius:.6rem}
-.site-nav a:hover{background:rgba(255,255,255,.06);opacity:1}
+.site-nav a{padding:.5rem .6rem;border-radius:.6rem}
+.site-nav a:not(.btn){color:var(--text);opacity:.85;text-decoration:none}
+.site-nav a:not(.btn):hover{background:rgba(255,255,255,.06);opacity:1}
+
+/* Botões */
 .btn{display:inline-block;border:1px solid var(--brand);color:#0b0f1a;background:var(--brand);padding:.8rem 1.1rem;border-radius:.9rem;font-weight:700;letter-spacing:.2px;text-decoration:none;box-shadow:var(--shadow)}
 .btn.small{padding:.55rem .8rem;font-size:.95rem}
-.btn.ghost{background:transparent;color:var(--text);border-color:rgba(255,255,255,.25)}
+.btn.ghost{background:transparent;color:var(--text);border-color:rgba(255,255,255,.35)}
 .btn.primary{background:var(--brand);border-color:transparent;color:#0b0f1a}
+.site-header .btn.contrast{background:#fff;border-color:#fff;color:#0b0f1a}
+.site-header .btn.contrast:hover{filter:brightness(.94)}
 .nav-toggle{display:none}
 
 /* HERO */
@@ -93,12 +98,7 @@ a:hover{opacity:.9;text-decoration:underline}
 
 /* CTA WIDE */
 .cta-wide{padding:40px 0}
-.cta-wide-box{display:grid;place-items:center;text-align:center;gap:.6rem;background:linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.25);border-radius:1.2rem;padding:2rem;}
-
-/* CONTATO */
-.contato{padding:64px 0}
-.contato-grid{display:grid;grid-template-columns:1fr;gap:1rem}
-.contact-list a{font-weight:700}
+.cta-wide-box{display:grid;place-items:center;text-align:center;gap:.6rem;background:linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.25);border-radius:1.2rem;padding:2rem}
 
 /* FOOTER */
 .site-footer{border-top:1px solid rgba(255,255,255,.08);padding:28px 0 40px}
@@ -117,24 +117,4 @@ a:hover{opacity:.9;text-decoration:underline}
   .footer-grid{grid-template-columns:1fr}
   .site-nav{display:none;position:absolute;right:1rem;top:64px;background:#0b0f1a;border:1px solid var(--stroke);border-radius:1rem;padding:.6rem;flex-direction:column;gap:.2rem}
   .nav-toggle{display:inline-flex;align-items:center;gap:.5rem;border-radius:.6rem;border:1px solid var(--stroke);background:transparent;color:var(--text);padding:.5rem .7rem}
-/* ...mantém o topo igual ao que enviei antes... */
-
-/* Botão com contraste no header já existe */
-.site-header .btn.contrast{background:#fff;border-color:#fff;color:#0b0f1a}
-.site-header .btn.contrast:hover{filter:brightness(.94)}
-
-/* Linha de ações nos cards (dois botões lado a lado) */
-.card .actions{
-  margin-top:auto;
-  display:flex;
-  gap:.5rem;
-  flex-wrap:wrap;
 }
-.card .actions .btn{margin-top:0}
-
-/* Opcional: leve destaque nos botões de WhatsApp (continua no tema branco) */
-.btn.whatsapp{border-color:rgba(255,255,255,.45)}
-.btn.whatsapp:hover{background:rgba(255,255,255,.12);color:#fff}
-
-/* ...restante do CSS igual ao anterior... */
-
