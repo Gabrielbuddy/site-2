@@ -11,3 +11,4 @@ if (toggle && menu){
 
 // Ano no rodapé
 document.getElementById('year').textContent = new Date().getFullYear();
+
