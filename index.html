@@ -1,81 +1,228 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Constelação na Água - José Gabriel</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>José Gabriel — Constelação na Água</title>
+  <meta name="description" content="Constelação na Água com José Gabriel. Clareza, reconciliação e força para resolução de conflitos em alinhamento com a vontade do Todo." />
+  <meta name="theme-color" content="#0C0F1A" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" as="image" href="assets/foto-hero.jpg">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="José Gabriel — Constelação na Água" />
+  <meta property="og:description" content="Atendimentos em Constelação na Água. Clareza, reconciliação e força para seguir." />
+  <meta property="og:image" content="assets/foto-hero.jpg" />
+  <meta property="og:type" content="website" />
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-  <!-- Hero -->
-  <section class="bg-gradient-to-r from-cyan-600 to-blue-600 text-white min-h-screen flex flex-col items-center justify-center text-center px-6">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Constelação na Água</h1>
-    <p class="text-lg md:text-2xl mb-8">Um encontro profundo de cura, clareza e reconciliação.</p>
-    <a href="https://wa.me/5553999038427" target="_blank"
-       class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg">
-       Agendar pelo WhatsApp
-    </a>
-  </section>
-
-  <!-- Sobre -->
-  <section class="py-16 px-6 max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6">Sobre o trabalho</h2>
-    <p class="text-lg leading-relaxed">
-      A <strong>Constelação na Água</strong> é uma forma única de constelação familiar, 
-      realizada com elementos da água como espelho simbólico das relações.  
-      Esse método traz profundidade, leveza e uma conexão especial com as emoções, 
-      permitindo enxergar os laços invisíveis que nos prendem e reorganizar nossa história.  
-    </p>
-  </section>
-
-  <!-- Como funciona -->
-  <section class="bg-gray-100 py-16 px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">Como funciona</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-center">
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <h3 class="font-semibold text-xl mb-2">1. Agendamento</h3>
-        <p>Você marca sua sessão diretamente pelo WhatsApp.</p>
+  <!-- HEADER -->
+  <header class="site-header" id="topo">
+    <div class="container">
+      <div class="brand">
+        <a href="#topo" aria-label="José Gabriel - Início">
+          <span class="brand-mark">JG</span>
+          <span class="brand-text">José&nbsp;Gabriel</span>
+        </a>
       </div>
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <h3 class="font-semibold text-xl mb-2">2. Preparação</h3>
-        <p>A sessão é feita com água, que reflete os movimentos internos e simbólicos da sua história.</p>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <nav id="menu" class="site-nav" aria-label="Principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#programas">Atendimentos</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a class="btn small contrast"
+           href="https://wa.me/5553999038427?text=Ol%C3%A1%20Jos%C3%A9%20Gabriel%2C%20vim%20do%20site."
+           target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-media">
+          <div class="photo-wrap">
+            <img src="assets/foto-hero.jpg" alt="José Gabriel conduzindo Constelação na Água" loading="eager" />
+          </div>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Constelação na Água · Presencial e Online</p>
+          <h1>Clareza para reconciliar.<br/>Força para seguir.</h1>
+          <p class="lead">Atendimentos em Constelação na Água — um caminho sensível e direto para resolução de conflitos em alinhamento com a vontade do Todo.</p>
+          <div class="cta-row">
+            <a href="#sobre" class="btn ghost">Conhecer meu trabalho</a>
+            <a class="btn primary whatsapp"
+               href="https://wa.me/5553999038427?text=Ol%C3%A1%20Jos%C3%A9%20Gabriel%2C%20quero%20agendar%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua."
+               target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <ul class="hero-points">
+            <li>Constelação na Água (individual e em grupo)</li>
+            <li>Abordagem simbólica, prática e respeitosa</li>
+            <li>Plano simples após a sessão</li>
+          </ul>
+        </div>
       </div>
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <h3 class="font-semibold text-xl mb-2">3. Transformação</h3>
-        <p>Ao olhar para as imagens reveladas, você encontra clareza, força e novos caminhos.</p>
+
+      <div class="trust">
+        <div class="container trust-grid">
+          <div class="trust-item"><span>Desde 2019</span> estudo e aplico</div>
+          <div class="trust-item"><span>6 anos</span> de experiência</div>
+          <div class="trust-item"><span>Método</span> na Água</div>
+          <div class="trust-item"><span>Online</span> e presencial</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="sobre" id="sobre">
+      <div class="container sobre-grid">
+        <div class="sobre-media">
+          <img src="assets/foto-sobre.jpg" alt="Retrato de José Gabriel" loading="lazy"/>
+        </div>
+        <div class="sobre-copy">
+          <h2>Sobre mim</h2>
+          <p>Sou o José Gabriel. Conheci a <strong>Constelação Familiar há 6 anos</strong> e, desde então — <strong>2019</strong> — vivo estudando e aplicando na minha própria vida. Nesse caminho, <strong>desenvolvi métodos diferenciados e mais eficientes</strong> para facilitar processos de reconciliação e tomada de consciência.</p>
+          <p>Hoje utilizo a <strong>técnica da Constelação na Água</strong> para a resolução de conflitos, sempre em <strong>alinhamento com a vontade do Todo</strong> — com respeito à história de cada um, sem promessas mágicas e com pés no chão.</p>
+          <ul class="checklist">
+            <li>Espaço seguro, verdadeiro e acolhedor</li>
+            <li>Olhar sistêmico com linguagem simples</li>
+            <li>Passos práticos para depois da sessão</li>
+          </ul>
+          <div class="cta-row">
+            <a href="#programas" class="btn">Ver atendimentos</a>
+            <a class="btn ghost whatsapp"
+               href="https://wa.me/5553999038427?text=Quero%20saber%20mais%20sobre%20a%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua."
+               target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATENDIMENTOS -->
+    <section class="programas" id="programas">
+      <div class="container">
+        <header class="section-head">
+          <h2>Atendimentos</h2>
+          <p>Escolha a forma que melhor atende seu momento agora.</p>
+        </header>
+        <div class="cards">
+          <article class="card">
+            <h3>Constelação na Água — Individual</h3>
+            <p>Encontro 1:1 para olhar um tema específico com profundidade e respeito.</p>
+            <ul>
+              <li>Duração aproximada: 60–90 minutos</li>
+              <li>Plano simples após a sessão</li>
+              <li>Online ou presencial</li>
+            </ul>
+            <a class="btn small whatsapp"
+               href="https://wa.me/5553999038427?text=Quero%20agendar%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua%20individual"
+               target="_blank" rel="noopener">Falar no WhatsApp</a>
+          </article>
+
+          <article class="card">
+            <h3>Constelação na Água — Grupo</h3>
+            <p>Vivência em grupo com campo seguro e condução sensível.</p>
+            <ul>
+              <li>Datas e vagas limitadas</li>
+              <li>Participação como constelante ou representante</li>
+              <li>Materiais de orientação</li>
+            </ul>
+            <a class="btn small whatsapp"
+               href="https://wa.me/5553999038427?text=Quero%20saber%20sobre%20a%20viv%C3%AAncia%20em%20grupo"
+               target="_blank" rel="noopener">Falar no WhatsApp</a>
+          </article>
+
+          <article class="card">
+            <h3>Acompanhamento Sistêmico</h3>
+            <p>Sequência curta de encontros para sustentar mudanças após a constelação.</p>
+            <ul>
+              <li>Plano de 3 a 4 sessões</li>
+              <li>Check-ins por WhatsApp</li>
+              <li>Exercícios simples de integração</li>
+            </ul>
+            <a class="btn small whatsapp"
+               href="https://wa.me/5553999038427?text=Quero%20Acompanhamento%20Sist%C3%AAmico"
+               target="_blank" rel="noopener">Falar no WhatsApp</a>
+          </article>
+
+          <article class="card">
+            <h3>Ritual na Água</h3>
+            <p>Prática simbólica focada em fechamento de ciclos e novos começos.</p>
+            <ul>
+              <li>Definição de intenção</li>
+              <li>Passos de cuidado pós-ritual</li>
+              <li>Disponível online e presencial</li>
+            </ul>
+            <a class="btn small whatsapp"
+               href="https://wa.me/5553999038427?text=Quero%20saber%20sobre%20o%20Ritual%20na%20%C3%81gua"
+               target="_blank" rel="noopener">Falar no WhatsApp</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos" id="depoimentos">
+      <div class="container">
+        <header class="section-head">
+          <h2>Depoimentos reais</h2>
+          <p>Processos conduzidos com respeito e resultado.</p>
+        </header>
+        <div class="quotes">
+          <figure class="quote">
+            <blockquote>“A sessão na água me trouxe uma paz que eu não sentia há anos.”</blockquote>
+            <figcaption>— Mariana L.</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“Saí com clareza e um passo-a-passo simples pra seguir.”</blockquote>
+            <figcaption>— Rafael M.</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“No grupo, me senti visto(a) e fortalecido(a).”</blockquote>
+            <figcaption>— Camila T.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA WIDE -->
+    <section class="cta-wide">
+      <div class="container cta-wide-box">
+        <h2>Vamos começar?</h2>
+        <p>Uma conversa rápida no WhatsApp para entender o tema e ajustar o formato certo.</p>
+        <a class="btn primary whatsapp"
+           href="https://wa.me/5553999038427?text=Quero%20come%C3%A7ar%20minha%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua"
+           target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="foot-brand">
+        <div class="brand-mark">JG</div>
+        <p>© <span id="year"></span> José Gabriel. Todos os direitos reservados.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <a href="#sobre">Sobre</a>
+        <a href="#programas">Atendimentos</a>
+        <a href="#depoimentos">Depoimentos</a>
+      </nav>
+      <div class="legal">
+        <small>Este trabalho é de natureza formativa e não substitui acompanhamento médico ou psicológico.</small>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- Benefícios -->
-  <section class="py-16 px-6 max-w-5xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-10">Benefícios</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <p>Compreensão mais profunda das relações familiares e pessoais.</p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <p>Liberação de padrões repetitivos e crenças limitantes.</p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <p>Reconexão com sua força interior e ancestralidade.</p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-md">
-        <p>Sensação de leveza e clareza emocional após a sessão.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Final -->
-  <section class="bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-20 text-center">
-    <h2 class="text-3xl font-bold mb-6">Agende sua Constelação na Água</h2>
-    <p class="text-lg mb-8">Entre em contato e reserve seu horário pelo WhatsApp.</p>
-    <a href="https://wa.me/5553999038427" target="_blank"
-       class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg">
-       Falar no WhatsApp
-    </a>
-  </section>
-
+  <script src="app.js"></script>
 </body>
 </html>
