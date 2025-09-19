@@ -423,4 +423,87 @@
         <p><strong>Você está pronto(a) para explorar camadas ocultas da sua vida?</strong></p>
         <p>Eu estou aqui para te guiar nessa jornada de autoconhecimento e transformação.</p>
         <p><strong>Consulta online de diagnóstico gratuita</strong> para avaliarmos sua necessidade e entender se a constelação é o caminho certo para você agora.</p>
-        <p>👉 Me chama no WhatsApp e c
+        <p>👉 Me chama no WhatsApp e combinamos sua sessão.</p>
+
+        <div class="cta-row" style="justify-content:center;">
+          <a class="btn primary whatsapp"
+             href="https://wa.me/5553999038427?text=Quero%20a%20consulta%20de%20diagn%C3%B3stico%20gratuita"
+             target="_blank" rel="noopener">Pedir diagnóstico gratuito</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA WIDE -->
+    <section class="cta-wide">
+      <div class="container">
+        <div class="box">
+          <h2>Vamos começar</h2>
+          <p>Fala comigo no WhatsApp: combinamos o tema, alinhamos expectativas e marcamos a sua sessão individual.</p>
+          <a class="btn primary whatsapp"
+             href="https://wa.me/5553999038427?text=Quero%20come%C3%A7ar%20minha%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua%20individual"
+             target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER estilo portal -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="foot-brand">
+        <div class="brand-mark">JG</div>
+        <div>
+          <strong>José Gabriel</strong>
+          <p style="margin:4px 0 0">Constelação na Água com conversa sistêmica e músicas.</p>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Explorar</h4>
+        <a href="#programas">Atendimentos</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#oque">O que é</a>
+      </div>
+
+      <div class="foot-col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/5553999038427?text=Ol%C3%A1%20Jos%C3%A9%20Gabriel%2C%20vim%20do%20site." target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#agendamento">Agendamento</a>
+      </div>
+
+      <div class="legal">
+        <small>© <span id="year"></span> José Gabriel. Todos os direitos reservados.</small>
+        <small>Este trabalho é formativo e não substitui acompanhamento médico ou psicológico.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Ano no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu mobile
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('menu');
+    if (btn && nav){
+      btn.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+      });
+    }
+
+    // Slider de depoimentos
+    const slides = document.getElementById('slides');
+    const dots = Array.from(document.querySelectorAll('.dot'));
+    function go(i){
+      slides.style.transform = `translateX(-${i*100}%)`;
+      dots.forEach(d => d.classList.remove('active'));
+      dots[i].classList.add('active');
+    }
+    dots.forEach(d => d.addEventListener('click', () => go(+d.dataset.i)));
+    // autoplay leve
+    let idx = 0; setInterval(()=>{ idx = (idx+1)%dots.length; go(idx); }, 6000);
+  </script>
+</body>
+</html>
