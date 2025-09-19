@@ -4,102 +4,115 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>José Gabriel — Constelação na Água</title>
-  <meta name="description" content="Constelação na Água com conversa sistêmica e música para resolução de conflitos e motivação." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="description" content="Constelação Familiar na Água com José Gabriel. Conversa sistêmica, músicas e métodos validados para clareza e resolução de conflitos." />
+  <meta name="theme-color" content="#0C0F1A" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" as="image" href="assets/transoco.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --blue:#0F6BFF;
-      --blue-d:#0841aa;
-      --black:#000;
-      --white:#fff;
-      --radius-xl:20px;
-      --shadow-xl:0 40px 70px rgba(0,0,0,.45);
-      --container:1200px;
+    :root {
+      --blue: #0a4c8c;
+      --blue-dark: #072f57;
+      --white: #ffffff;
+      --black: #0b1220;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--black);color:var(--white)}
-    a{text-decoration:none;color:inherit}
+    * {box-sizing:border-box;margin:0;padding:0}
+    body {font-family: 'Inter', sans-serif;line-height:1.6;background:var(--white);color:var(--black)}
 
-    .container{max-width:var(--container);margin:0 auto;padding:0 20px}
+    /* HEADER */
+    .site-header {background:var(--blue-dark);color:var(--white);padding:14px 20px;position:sticky;top:0;z-index:50}
+    .site-header .container {max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .brand {display:flex;align-items:center;gap:10px;font-weight:800;color:var(--white);text-decoration:none}
+    .brand-mark {background:var(--blue);color:var(--white);width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-weight:700}
+    .site-nav {display:flex;gap:18px;align-items:center}
+    .site-nav a {color:var(--white);text-decoration:none;font-weight:600}
+    .btn {padding:10px 16px;border-radius:8px;font-weight:600;text-decoration:none;display:inline-block}
+    .btn.blue {background:var(--blue);color:var(--white)}
 
-    .site-header{background:var(--black);border-bottom:1px solid rgba(255,255,255,.1)}
-    .site-header .row{display:flex;justify-content:space-between;align-items:center;height:72px}
-    .logo{font-weight:900;font-size:1.2rem;background:var(--blue);color:#fff;padding:6px 14px;border-radius:8px}
-    .site-nav{display:flex;gap:24px;align-items:center}
-    .site-nav a{color:#fff;font-weight:600;font-size:.95rem}
-    .btn{display:inline-block;padding:10px 22px;border-radius:30px;font-weight:800;transition:.25s}
-    .btn.blue{background:var(--blue);color:#fff}
-    .btn.blue:hover{background:var(--blue-d)}
+    /* INDICADORES */
+    .indicadores {background:var(--blue);color:var(--white);padding:20px 0;text-align:center}
+    .indicadores .container {max-width:1000px;margin:0 auto;display:flex;gap:20px;justify-content:space-around;flex-wrap:wrap}
+    .indicador {font-size:1.1rem;font-weight:600}
 
-    .indicadores{background:var(--black);border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);padding:12px 0}
-    .indicadores-grid{display:flex;justify-content:center;gap:40px;text-align:center;font-size:.95rem;font-weight:700}
-    .indicadores-grid span{color:var(--blue);font-size:1.1rem;font-weight:900;margin-right:6px}
-    @media(max-width:720px){.indicadores-grid{flex-direction:column;gap:8px}}
-
-    .hero{
-      position:relative;
-      background:url("https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1600&auto=format&fit=crop") center/cover no-repeat;
-      min-height:520px;display:flex;align-items:center;
-      border-radius:0 0 var(--radius-xl) var(--radius-xl);box-shadow:var(--shadow-xl)
-    }
-    .hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.6);border-radius:0 0 var(--radius-xl) var(--radius-xl)}
-    .hero-content{position:relative;z-index:1;max-width:720px;padding:60px 20px}
-    .hero h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.15;margin-bottom:1rem;font-weight:900}
-    .hero p{font-size:1.15rem;margin-bottom:2rem;color:#e9e9e9}
+    /* HERO */
+    .hero {background:var(--black);color:var(--white);padding:80px 20px;text-align:center}
+    .hero h1 {font-size:2.5rem;margin-bottom:1rem}
+    .hero p {font-size:1.2rem;margin-bottom:1.5rem}
+    .hero img {max-width:700px;width:100%;height:auto;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.3);margin-bottom:2rem}
+    .cta-row {display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 
     /* SOBRE MIM */
-    .sobre{background:#fff;color:#0b1220;padding:80px 20px;text-align:center}
-    .sobre h2{font-size:2rem;margin-bottom:1rem;color:var(--blue)}
-    .sobre p{margin-bottom:1rem;font-size:1.06rem;line-height:1.65}
+    .sobre {background:var(--white);color:var(--black);padding:80px 20px;text-align:center}
+    .sobre h2 {font-size:2rem;margin:1.5rem 0;color:var(--blue)}
+    .sobre p {margin-bottom:1rem;font-size:1.06rem;line-height:1.65}
 
-    .sobre-images{display:flex;gap:20px;justify-content:center;margin-bottom:2rem}
-    .sobre-images img{width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
-    .sobre-images img:first-child{flex:1.2} /* imagem da esquerda maior */
-    .sobre-images img:last-child{flex:0.8}  /* imagem da direita menor */
+    .sobre-imagem-unica {display:flex;justify-content:center;margin-bottom:2rem}
+    .sobre-imagem-unica img {
+      max-width:600px;
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,.2)
+    }
 
-    .sobre-ferramentas{margin-top:2rem}
-    .sobre-ferramentas img{max-width:400px;width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+    .sobre-ferramentas {margin:2rem 0}
+    .sobre-ferramentas img {
+      max-width:400px;
+      width:100%;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,.2)
+    }
+
+    /* FOOTER */
+    .site-footer {background:var(--blue-dark);color:var(--white);padding:20px;text-align:center}
+    .site-footer a {color:var(--white);text-decoration:none}
   </style>
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
-    <div class="container row">
-      <div class="logo">JG</div>
+    <div class="container">
+      <a href="#topo" class="brand">
+        <span class="brand-mark">JG</span>
+        <span class="brand-text">José Gabriel</span>
+      </a>
       <nav class="site-nav">
         <a href="#sobre">Sobre</a>
-        <a href="#constelacao">O que é</a>
-        <a href="#contato" class="btn blue">Agendar</a>
+        <a href="#contato">Contato</a>
+        <a href="https://wa.me/5553999038427?text=Olá%20José%20Gabriel%2C%20vim%20do%20site." class="btn blue" target="_blank">WhatsApp</a>
       </nav>
-    </div>
-    <div class="indicadores">
-      <div class="container indicadores-grid">
-        <div><span>+6</span> anos de trabalho</div>
-        <div><span>+300</span> pessoas envolvidas</div>
-        <div><span>✓</span> métodos criados e validados</div>
-      </div>
     </div>
   </header>
 
+  <!-- INDICADORES -->
+  <section class="indicadores">
+    <div class="container">
+      <div class="indicador">+6 anos de trabalho</div>
+      <div class="indicador">+300 pessoas envolvidas</div>
+      <div class="indicador">Métodos criados e validados</div>
+    </div>
+  </section>
+
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-content">
-      <h1>Unindo pessoas, revelando caminhos</h1>
-      <p>Constelação na Água para clareza, resolução de conflitos e motivação em sua jornada — online e presencial.</p>
-      <a href="https://wa.me/5553999038427?text=Quero%20agendar%20minha%20sess%C3%A3o" class="btn blue">Agendar agora</a>
+    <div class="container">
+      <img src="assets/transoco.jpg" alt="Imagem principal relacionada à constelação familiar" />
+      <h1>Constelação na Água</h1>
+      <p>Clareza, acolhimento e resolução de conflitos em sessões individuais e personalizadas.</p>
+      <div class="cta-row">
+        <a href="#sobre" class="btn blue">Conhecer meu trabalho</a>
+        <a href="https://wa.me/5553999038427?text=Quero%20agendar%20uma%20sessão" class="btn blue" target="_blank">Agendar sessão</a>
+      </div>
     </div>
   </section>
 
   <!-- SOBRE MIM -->
   <section class="sobre" id="sobre">
     <div class="container">
-      <div class="sobre-images">
+      <div class="sobre-imagem-unica">
         <img src="assets/foto-hero.jpg" alt="José Gabriel em destaque" />
-        <img src="assets/foto-sobre.jpg" alt="José Gabriel em sessão de constelação" />
       </div>
       <h2>Sobre mim</h2>
       <p>Sou o José Gabriel. Há anos estudo e aplico a Constelação Familiar e desenvolvi um jeito próprio de facilitar reconciliações e decisões com os pés no chão.</p>
@@ -108,9 +121,18 @@
       <div class="sobre-ferramentas">
         <img src="assets/ferramentas.jpg" alt="Bonecos e ferramentas usados na constelação" />
       </div>
-      <a href="https://wa.me/5553999038427?text=Quero%20saber%20mais%20sobre%20a%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua" class="btn blue">Falar no WhatsApp</a>
+      <a href="https://wa.me/5553999038427?text=Quero%20saber%20mais%20sobre%20a%20Constelação" class="btn blue">Falar no WhatsApp</a>
     </div>
   </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> José Gabriel. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
