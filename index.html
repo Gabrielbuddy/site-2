@@ -7,16 +7,16 @@
   <meta name="description" content="Constelação Familiar na Água com José Gabriel. Conversa sistêmica, músicas e métodos validados para clareza e resolução de conflitos." />
   <meta name="theme-color" content="#072f57" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="preload" as="image" href="assets/trancoso.jpg">
+  <link rel="preload" as="image" href="assets/foto-hero.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --blue:#0a4c8c;       /* azul forte */
-      --blue-2:#0d61b5;     /* azul hover */
-      --blue-dark:#072f57;  /* azul muito escuro */
+      --blue:#0a4c8c;
+      --blue-2:#0d61b5;
+      --blue-dark:#072f57;
       --white:#ffffff;
-      --ink:#0b1220;        /* preto-azulado p/ textos no fundo claro */
+      --ink:#0b1220;
       --radius:12px;
       --radius-xl:20px;
       --shadow:0 10px 30px rgba(0,0,0,.18);
@@ -38,13 +38,10 @@
     .brand-text{font-weight:800;letter-spacing:.02em}
     .site-nav{display:flex;gap:18px;align-items:center}
     .site-nav a{color:#fff;font-weight:600;opacity:.95}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:11px 18px;border-radius:999px;font-weight:700;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .15s ease}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border-radius:999px;font-weight:700;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .15s ease}
     .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg)}
     .btn.blue{background:var(--blue);color:#fff}
     .btn.blue:hover{background:var(--blue-2)}
-    .btn .wa{
-      width:18px;height:18px;display:inline-block
-    }
 
     /* INDICADORES */
     .indicadores{background:var(--blue);color:#fff;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)}
@@ -68,28 +65,23 @@
     .sobre p{margin-bottom:1rem;font-size:1.06rem}
     .sobre-imagem-unica{display:flex;justify-content:center;margin-bottom:2rem}
     .sobre-imagem-unica img{max-width:640px;border-radius:var(--radius);box-shadow:var(--shadow)}
-    .sobre-ferramentas{margin:26px auto 12px}
-    .sobre-ferramentas img{max-width:420px;border-radius:var(--radius);box-shadow:var(--shadow)}
 
     /* O QUE É CONSTELAÇÃO */
-    .oque{background:#fff;color:var(--ink);padding:64px 0;border-top:1px solid #eef2f7}
-    .oque-grid{display:grid;gap:28px;align-items:center}
-    @media (min-width: 960px){ .oque-grid{grid-template-columns:1.2fr .8fr} }
+    .oque{background:#fff;color:var(--ink);padding:64px 0;border-top:1px solid #eef2f7;text-align:center}
     .oque h2{font-size:2rem;margin-bottom:12px;color:var(--blue)}
     .oque p{margin-bottom:12px}
-    .oque img{border-radius:var(--radius);box-shadow:var(--shadow)}
+    .oque img{border-radius:var(--radius);box-shadow:var(--shadow);margin:20px auto;max-width:420px;display:block}
 
     /* WHATSAPP FLOAT */
     .wa-float{
       position:fixed;right:18px;bottom:18px;z-index:50;
       background:var(--blue);color:#fff;border-radius:999px;
-      display:flex;align-items:center;gap:10px;padding:12px 16px;
+      display:flex;align-items:center;justify-content:center;padding:12px 16px;
       box-shadow:0 12px 40px rgba(0,0,0,.28);
       font-weight:800
     }
     .wa-float:hover{background:var(--blue-2)}
-    .wa-float .wa{width:20px;height:20px;display:inline-block}
-    @media (max-width: 520px){ .wa-float span{display:none} }
+    @media (max-width: 520px){ .wa-float{padding:12px;border-radius:50%} .wa-float span{display:none} }
 
     /* FOOTER */
     .site-footer{background:var(--blue-dark);color:#fff;text-align:center;padding:20px}
@@ -107,17 +99,9 @@
       <nav class="site-nav" aria-label="Principal">
         <a href="#sobre">Sobre</a>
         <a href="#oque">O que é</a>
-        <a href="https://wa.me/5553999038427?text=Ol%C3%A1%20Jos%C3%A9%20Gabriel%2C%20vim%20do%20site." class="btn blue" target="_blank" rel="noopener">
-          <!-- ícone whatsapp -->
-          <svg class="wa" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <path fill="#fff" d="M19.2 17.3c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.2-.4-2.3-1.4- .9-.8-1.4-1.8-1.6-2.1-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1 2.9 1.1 3.1c.1.2 2.1 3.2 5 4.4 2.9 1.2 2.9.8 3.4.8.5 0 1.8-.7 2-1.3.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3z"/>
-            <path fill="#fff" d="M26.7 5.3A13 13 0 1 0 4.7 26.6L4 28.9l2.4-.6a13 13 0 0 0 20.3-23zM16 27a11 11 0 1 1 0-22 11 11 0 0 1 0 22z"/>
-          </svg>
-          WhatsApp
-        </a>
+        <a href="https://wa.me/5553999038427?text=Ol%C3%A1%20Jos%C3%A9%20Gabriel%2C%20vim%20do%20site." class="btn blue" target="_blank" rel="noopener">WhatsApp</a>
       </nav>
     </div>
-    <!-- INDICADORES -->
     <div class="indicadores">
       <div class="container wrap">
         <div class="item"><span>+6</span><strong>anos de trabalho</strong></div>
@@ -135,17 +119,11 @@
         <p>Clareza, acolhimento e resolução de conflitos em sessões individuais — online e presencial.</p>
         <div class="cta-row">
           <a href="#sobre" class="btn blue">Conhecer meu trabalho</a>
-          <a href="https://wa.me/5553999038427?text=Quero%20agendar%20uma%20sess%C3%A3o" class="btn blue" target="_blank" rel="noopener">
-            <svg class="wa" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <path fill="#fff" d="M19.2 17.3c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.2-.4-2.3-1.4- .9-.8-1.4-1.8-1.6-2.1-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1 2.9 1.1 3.1c.1.2 2.1 3.2 5 4.4 2.9 1.2 2.9.8 3.4.8.5 0 1.8-.7 2-1.3.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3z"/>
-              <path fill="#fff" d="M26.7 5.3A13 13 0 1 0 4.7 26.6L4 28.9l2.4-.6a13 13 0 0 0 20.3-23zM16 27a11 11 0 1 1 0-22 11 11 0 0 1 0 22z"/>
-            </svg>
-            Agendar sessão
-          </a>
+          <a href="https://wa.me/5553999038427?text=Quero%20agendar%20uma%20sess%C3%A3o" class="btn blue" target="_blank" rel="noopener">Agendar sessão</a>
         </div>
       </div>
       <div class="hero-media">
-        <img id="heroImg" src="assets/trancoso.jpg" alt="Imagem principal relacionada à constelação familiar" loading="eager">
+        <img src="assets/foto-hero.jpg" alt="Imagem principal José Gabriel" loading="eager">
       </div>
     </div>
   </section>
@@ -154,65 +132,31 @@
   <section class="sobre" id="sobre">
     <div class="container">
       <div class="sobre-imagem-unica">
-        <img src="assets/foto-hero.jpg" alt="José Gabriel em destaque">
+        <img src="assets/foto-sobre.jpg" alt="José Gabriel em sessão de constelação">
       </div>
       <h2>Sobre mim</h2>
       <p>Sou o José Gabriel. Há anos estudo e aplico a Constelação Familiar e desenvolvi um jeito próprio de facilitar reconciliações e decisões com os pés no chão.</p>
       <p>Na Constelação na Água, uno <strong>conversa sistêmica</strong> com recursos simbólicos e musicais, para tornar a sessão mais fácil, verdadeira e transformadora.</p>
       <p>Meu compromisso é oferecer um espaço de confiança, clareza e motivação para quem busca resolução de conflitos e novos caminhos.</p>
-      <div class="sobre-ferramentas">
-        <img src="assets/ferramentas.jpg" alt="Bonecos e ferramentas usados na constelação">
-      </div>
-      <a href="https://wa.me/5553999038427?text=Quero%20saber%20mais%20sobre%20a%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua" class="btn blue" target="_blank" rel="noopener">
-        <svg class="wa" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <path fill="#fff" d="M19.2 17.3c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.2-.4-2.3-1.4- .9-.8-1.4-1.8-1.6-2.1-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1 2.9 1.1 3.1c.1.2 2.1 3.2 5 4.4 2.9 1.2 2.9.8 3.4.8.5 0 1.8-.7 2-1.3.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3z"/>
-          <path fill="#fff" d="M26.7 5.3A13 13 0 1 0 4.7 26.6L4 28.9l2.4-.6a13 13 0 0 0 20.3-23zM16 27a11 11 0 1 1 0-22 11 11 0 0 1 0 22z"/>
-        </svg>
-        Falar no WhatsApp
-      </a>
+      <a href="https://wa.me/5553999038427?text=Quero%20saber%20mais%20sobre%20a%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua" class="btn blue" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </div>
   </section>
 
-  <!-- O QUE É CONSTELAÇÃO NA ÁGUA -->
+  <!-- O QUE É CONSTELAÇÃO -->
   <section class="oque" id="oque">
-    <div class="container oque-grid">
-      <div class="oque-copy">
-        <h2>O que é Constelação na Água?</h2>
-        <p>
-          A Constelação Familiar na Água une a visão <strong>sistêmica</strong> ao elemento água, que ajuda a
-          evidenciar vínculos e padrões ocultos de forma simples e respeitosa.
-        </p>
-        <p>
-          O processo traz clareza para <strong>relacionamentos</strong>, <strong>conflitos familiares</strong> e
-          também para questões que se refletem no corpo — como <strong>doenças</strong> e bloqueios emocionais —
-          abrindo espaço para decisões mais conscientes e passos práticos.
-        </p>
-        <p>
-          Em cada sessão, você recebe um <strong>plano objetivo</strong> para integrar as percepções no dia a dia.
-        </p>
-        <div class="cta-row" style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap">
-          <a href="https://wa.me/5553999038427?text=Quero%20entender%20se%20a%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua%20%C3%A9%20pra%20mim" class="btn blue" target="_blank" rel="noopener">
-            <svg class="wa" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <path fill="#fff" d="M19.2 17.3c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.2-.4-2.3-1.4- .9-.8-1.4-1.8-1.6-2.1-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1 2.9 1.1 3.1c.1.2 2.1 3.2 5 4.4 2.9 1.2 2.9.8 3.4.8.5 0 1.8-.7 2-1.3.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3z"/>
-              <path fill="#fff" d="M26.7 5.3A13 13 0 1 0 4.7 26.6L4 28.9l2.4-.6a13 13 0 0 0 20.3-23zM16 27a11 11 0 1 1 0-22 11 11 0 0 1 0 22z"/>
-            </svg>
-            Tirar dúvidas
-          </a>
-        </div>
-      </div>
-      <div class="oque-media">
-        <img src="assets/ferramentas.jpg" alt="Ferramentas e símbolos da constelação na água">
-      </div>
+    <div class="container">
+      <h2>O que é Constelação na Água?</h2>
+      <p>A Constelação Familiar na Água une a visão <strong>sistêmica</strong> ao elemento água, que ajuda a evidenciar vínculos e padrões ocultos de forma simples e respeitosa.</p>
+      <p>O processo traz clareza para <strong>relacionamentos</strong>, <strong>conflitos familiares</strong> e também para questões que se refletem no corpo — como <strong>doenças</strong> e bloqueios emocionais — abrindo espaço para decisões mais conscientes e passos práticos.</p>
+      <p>Em cada sessão, você recebe um <strong>plano objetivo</strong> para integrar as percepções no dia a dia.</p>
+      <img src="assets/ferramentas.jpg" alt="Ferramentas utilizadas na constelação">
+      <a href="https://wa.me/5553999038427?text=Quero%20entender%20se%20a%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua%20%C3%A9%20pra%20mim" class="btn blue" target="_blank" rel="noopener">Tirar dúvidas</a>
     </div>
   </section>
 
-  <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a class="wa-float" href="https://wa.me/5553999038427?text=Ol%C3%A1%20Jos%C3%A9%20Gabriel%2C%20vim%20do%20site." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-    <svg class="wa" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-      <path fill="#fff" d="M19.2 17.3c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.2-.4-2.3-1.4- .9-.8-1.4-1.8-1.6-2.1-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1 2.9 1.1 3.1c.1.2 2.1 3.2 5 4.4 2.9 1.2 2.9.8 3.4.8.5 0 1.8-.7 2-1.3.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3z"/>
-      <path fill="#fff" d="M26.7 5.3A13 13 0 1 0 4.7 26.6L4 28.9l2.4-.6a13 13 0 0 0 20.3-23zM16 27a11 11 0 1 1 0-22 11 11 0 0 1 0 22z"/>
-    </svg>
-    <span>Falar no WhatsApp</span>
+  <!-- WHATSAPP FLOAT -->
+  <a class="wa-float" href="https://wa.me/5553999038427?text=Ol%C3%A1%20Jos%C3%A9%20Gabriel%2C%20vim%20do%20site." target="_blank" rel="noopener">
+    <span>WhatsApp</span>
   </a>
 
   <!-- FOOTER -->
@@ -221,23 +165,7 @@
   </footer>
 
   <script>
-    // Ano do rodapé
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Fallback em cadeia para a imagem principal do HERO:
-    // tenta trancoso.jpg → transoco.jpg → foto-hero.jpg
-    (function(){
-      const img = document.getElementById('heroImg');
-      const fallbacks = ['assets/transoco.jpg','assets/foto-hero.jpg'];
-      let i = 0;
-      img.onerror = function(){
-        if(i < fallbacks.length){
-          this.onerror = null; // evita loop se fallback também falhar
-          this.src = fallbacks[i++];
-        }
-      };
-    })();
   </script>
-
 </body>
 </html>
