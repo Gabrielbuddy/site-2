@@ -54,8 +54,14 @@
     .sobre{background:#fff;color:#0b1220;padding:80px 20px;text-align:center}
     .sobre h2{font-size:2rem;margin-bottom:1rem;color:var(--blue)}
     .sobre p{margin-bottom:1rem;font-size:1.06rem;line-height:1.65}
+
     .sobre-images{display:flex;gap:20px;justify-content:center;margin-bottom:2rem}
-    .sobre-images img{width:100%;max-width:360px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+    .sobre-images img{width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+    .sobre-images img:first-child{flex:1.2} /* imagem da esquerda maior */
+    .sobre-images img:last-child{flex:0.8}  /* imagem da direita menor */
+
+    .sobre-ferramentas{margin-top:2rem}
+    .sobre-ferramentas img{max-width:400px;width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
   </style>
 </head>
 <body>
@@ -99,6 +105,9 @@
       <p>Sou o José Gabriel. Há anos estudo e aplico a Constelação Familiar e desenvolvi um jeito próprio de facilitar reconciliações e decisões com os pés no chão.</p>
       <p>Na Constelação na Água, uno <strong>conversa sistêmica</strong> com recursos simbólicos e musicais, para tornar a sessão mais fácil, verdadeira e transformadora.</p>
       <p>Meu compromisso é oferecer um espaço de confiança, clareza e motivação para quem busca resolução de conflitos e novos caminhos.</p>
+      <div class="sobre-ferramentas">
+        <img src="assets/ferramentas.jpg" alt="Bonecos e ferramentas usados na constelação" />
+      </div>
       <a href="https://wa.me/5553999038427?text=Quero%20saber%20mais%20sobre%20a%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua" class="btn blue">Falar no WhatsApp</a>
     </div>
   </section>
