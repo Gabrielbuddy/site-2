@@ -67,4 +67,139 @@
     .sobre h2{font-size:2rem;margin:1.5rem 0;color:var(--blue)}
     .sobre p{margin-bottom:1rem;font-size:1.06rem}
     .sobre-imagem-unica{display:flex;justify-content:center;margin-bottom:2rem}
-    .sob
+    .sobre-imagem-unica img{max-width:640px;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    /* O QUE É */
+    .oque{background:#fff;color:var(--ink);padding:64px 0;border-top:1px solid #eef2f7;text-align:center}
+    .oque h2{font-size:2rem;margin-bottom:12px;color:var(--blue)}
+    .oque p{margin-bottom:12px}
+    .oque img{border-radius:var(--radius);box-shadow:var(--shadow);margin:20px auto;max-width:420px;display:block}
+
+    /* CTA FINAL VIVA */
+    .cta-final{
+      background: linear-gradient(135deg, var(--blue) 0%, #1180e2 55%, #1ba3ff 100%);
+      color:#fff;
+      padding:56px 0;
+      text-align:center;
+    }
+    .cta-final h3{font-size:clamp(1.4rem,3.5vw,2.1rem);margin-bottom:10px;font-weight:800;letter-spacing:.2px}
+    .cta-final p{opacity:.95;margin:0 auto 18px;max-width:820px}
+    .cta-final .cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .cta-final .btn.white{min-width:220px}
+
+    /* Selos */
+    .selos{background:#f7fafc;border-top:1px solid #e8eef5;border-bottom:1px solid #e8eef5;padding:18px 0}
+    .selos .grid{max-width:980px;margin:0 auto;padding:0 20px;display:grid;gap:14px;align-items:center;grid-template-columns: repeat(2, 1fr)}
+    @media (min-width: 780px){ .selos .grid{grid-template-columns: repeat(4, 1fr)} }
+    .selo{display:flex;gap:10px;align-items:center;justify-content:center;color:#0b1220;font-weight:700}
+    .selo small{display:block;font-weight:600;color:#334155;opacity:.9}
+    .selo .icon{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:#e7f2ff;color:#0a4c8c;font-weight:900;border:1px solid #cfe7ff}
+
+    /* Botão flutuante WhatsApp */
+    .wa-float{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--blue);color:#fff;border-radius:999px;display:flex;align-items:center;justify-content:center;padding:12px 16px;box-shadow:0 12px 40px rgba(0,0,0,.28);font-weight:800}
+    .wa-float:hover{background:var(--blue-2)}
+    @media (max-width: 520px){ .wa-float{padding:12px;border-radius:50%} .wa-float span{display:none} }
+
+    /* FOOTER */
+    .site-footer{background:var(--blue-dark);color:#fff;text-align:center;padding:20px}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="topo">
+    <div class="container row">
+      <a class="brand" href="#topo" aria-label="Início">
+        <span class="brand-mark">JG</span>
+        <span class="brand-text">José Gabriel</span>
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#oque">O que é</a>
+        <a href="https://wa.me/5553999038427?text=Ol%C3%A1%20Jos%C3%A9%20Gabriel%2C%20vim%20do%20site." class="btn blue" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+    <div class="indicadores">
+      <div class="container wrap">
+        <div class="item"><span>+6</span><strong>anos de trabalho</strong></div>
+        <div class="item"><span>+300</span><strong>pessoas envolvidas</strong></div>
+        <div class="item"><span>✓</span><strong>métodos criados e validados</strong></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Constelação na Água</h1>
+        <p>Clareza, acolhimento e resolução de conflitos em sessões individuais — online e presencial.</p>
+        <div class="cta-row">
+          <a href="#sobre" class="btn blue">Conhecer meu trabalho</a>
+          <a href="https://wa.me/5553999038427?text=Quero%20agendar%20uma%20sess%C3%A3o" class="btn blue" target="_blank" rel="noopener">Agendar sessão</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/foto-hero.jpg" alt="Imagem principal José Gabriel" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MIM -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-imagem-unica">
+        <img src="assets/foto-sobre.jpg" alt="José Gabriel em sessão de constelação">
+      </div>
+      <h2>Sobre mim</h2>
+      <p>Sou o José Gabriel. Há anos estudo e aplico a Constelação Familiar e desenvolvi um jeito próprio de facilitar reconciliações e decisões com os pés no chão.</p>
+      <p>Na Constelação na Água, uno <strong>conversa sistêmica</strong> com recursos simbólicos e musicais, para tornar a sessão mais fácil, verdadeira e transformadora.</p>
+      <p>Meu compromisso é oferecer um espaço de confiança, clareza e motivação para quem busca resolução de conflitos e novos caminhos.</p>
+      <a href="https://wa.me/5553999038427?text=Quero%20saber%20mais%20sobre%20a%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua" class="btn blue" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- O QUE É CONSTELAÇÃO -->
+  <section class="oque" id="oque">
+    <div class="container">
+      <h2>O que é Constelação na Água?</h2>
+      <p>A Constelação Familiar na Água une a visão <strong>sistêmica</strong> ao elemento água, que ajuda a evidenciar vínculos e padrões ocultos de forma simples e respeitosa.</p>
+      <p>O processo traz clareza para <strong>relacionamentos</strong>, <strong>conflitos familiares</strong> e também para questões que se refletem no corpo — como <strong>doenças</strong> e bloqueios emocionais — abrindo espaço para decisões mais conscientes e passos práticos.</p>
+      <p>Em cada sessão, você recebe um <strong>plano objetivo</strong> para integrar as percepções no dia a dia.</p>
+      <img src="assets/ferramentas.jpg" alt="Ferramentas utilizadas na constelação">
+    </div>
+  </section>
+
+  <!-- CTA FINAL VIVA -->
+  <section class="cta-final" id="contato">
+    <div class="container">
+      <h3>Vamos começar pelo simples?</h3>
+      <p>Uma conversa direta para entender seu momento e traçar o primeiro passo com segurança e clareza.</p>
+      <div class="cta-row">
+        <a href="https://wa.me/5553999038427?text=Ol%C3%A1%20Jos%C3%A9%20Gabriel%2C%20quero%20conversar%20sobre%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua." class="btn white" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a href="#sobre" class="btn blue">Conhecer meu trabalho</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELOS -->
+  <section class="selos" aria-label="Selos de segurança e confiança">
+    <div class="grid">
+      <div class="selo"><span class="icon">🔒</span><div><strong>Site seguro</strong><small>Conexão SSL</small></div></div>
+      <div class="selo"><span class="icon">🛡️</span><div><strong>Privacidade</strong><small>Dados protegidos</small></div></div>
+      <div class="selo"><span class="icon">✅</span><div><strong>Satisfação</strong><small>Atendimento humano</small></div></div>
+      <div class="selo"><span class="icon">↩️</span><div><strong>Flexível</strong><small>Remarcação simples</small></div></div>
+    </div>
+  </section>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a class="wa-float" href="https://wa.me/5553999038427?text=Ol%C3%A1%20Jos%C3%A9%20Gabriel%2C%20vim%20do%20site." target="_blank" rel="noopener"><span>WhatsApp</span></a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> José Gabriel. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
