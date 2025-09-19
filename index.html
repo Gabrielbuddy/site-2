@@ -4,441 +4,118 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>José Gabriel — Constelação na Água</title>
-  <meta name="description" content="Constelação na Água com conversa sistêmica e músicas para uma sessão mais verdadeira. Atendimentos individuais com José Gabriel." />
-  <meta name="theme-color" content="#0A2A6B" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="preload" as="image" href="assets/foto-hero.jpg">
+  <meta name="description" content="Constelação na Água com conversa sistêmica e música para uma sessão verdadeira." />
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
   <style>
-    :root{
-      /* Paleta azul forte + branco */
-      --bg: #0A2A6B;           /* fundo geral hero/nav (azul forte) */
-      --bg-deep: #083F95;      /* faixas e footer (azul ainda mais escuro) */
-      --ink: #0c0f1a;          /* texto escuro em blocos brancos */
-      --ink-inv: #ffffff;      /* texto claro em blocos azuis */
-      --muted: #C8D7FF;        /* texto secundário claro */
-      --brand: #0A5AD4;        /* azul vivo (botões/links) */
-      --brand-soft: #EAF2FF;   /* chips e fundos suaves */
-      --line: rgba(255,255,255,.18);
-      --line-dark: #e8eef6;
-      --radius: 14px;
-      --shadow: 0 12px 28px rgba(0,0,0,.25);
-      --container: 1180px;
+    :root {
+      --blue: #0F6BFF;      /* azul forte */
+      --black: #000000;     /* preto puro */
+      --white: #ffffff;     /* branco */
+      --radius-xl: 20px;
+      --shadow-xl: 0 40px 70px rgba(0,0,0,.45);
+      --container: 1200px;
     }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: Inter, sans-serif; background: var(--black); color: var(--white); }
 
-    *{box-sizing:border-box}
-    html,body{margin:0; padding:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    img{max-width:100%; display:block}
-    a{color:inherit; text-underline-offset:3px}
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 20px; }
 
-    .container{max-width:var(--container); margin:0 auto; padding:0 20px}
-    .narrow{max-width:880px; margin:0 auto}
-    .skip{position:absolute;left:-9999px}
+    /* TOPBAR */
+    .topbar {
+      background: var(--blue);
+      color: var(--white);
+      text-align: center;
+      padding: 8px 14px;
+      font-size: .9rem;
+      font-weight: 600;
+    }
 
     /* HEADER */
-    .site-header{position:sticky; top:0; z-index:80; background:var(--bg); color:var(--ink-inv); border-bottom:1px solid var(--line)}
-    .site-header .container{display:flex; align-items:center; justify-content:space-between; height:78px}
-    .brand a{display:flex; align-items:center; gap:.6rem; text-decoration:none}
-    .brand-mark{width:40px; height:40px; border-radius:10px; display:grid; place-items:center; color:#fff; font-weight:900; background:linear-gradient(135deg, var(--brand), #0e4fb3); box-shadow:var(--shadow)}
-    .brand-text{color:#fff; font-weight:800; letter-spacing:.02em}
+    .site-header {
+      background: var(--black);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .site-header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+    .brand { font-weight: 800; font-size: 1.1rem; letter-spacing: .05em; }
+    .site-nav { display: flex; gap: 24px; align-items: center; }
+    .site-nav a { color: var(--white); font-weight: 600; font-size: .95rem; }
 
-    .site-nav{display:flex; gap:18px; align-items:center}
-    .site-nav a{text-decoration:none; color:#fff; font-weight:700; opacity:.92}
-    .site-nav a:hover{opacity:1}
-    .nav-toggle{display:none; background:transparent; border:0; font-size:1.6rem; color:#fff}
-
-    /* Botões */
-    .btn{display:inline-block; padding:12px 18px; border-radius:10px; text-decoration:none; font-weight:800; transition:transform .08s ease, opacity .2s ease, background .2s ease, border-color .2s ease}
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{background:#fff; color:var(--bg); border:1px solid transparent; box-shadow:var(--shadow)}
-    .btn.whatsapp{background:var(--brand); color:#fff; border:1px solid transparent}
-    .btn.ghost{background:transparent; color:#fff; border:1px solid rgba(255,255,255,.28)}
-    .btn.small{padding:10px 14px}
-    .btn.contrast{background:#fff; color:var(--bg)}
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: .3s;
+    }
+    .btn.white { background: var(--white); color: var(--blue); }
+    .btn.white:hover { background: var(--blue); color: var(--white); }
 
     /* HERO */
-    .hero{background:linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%); color:var(--ink-inv)}
-    .hero-grid{display:grid; gap:28px; align-items:center; grid-template-columns:1fr}
-    @media (min-width: 960px){ .hero-grid{grid-template-columns:1.1fr 1fr} }
-    .hero{padding:48px 0 0}
-    .photo-wrap{border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); border:1px solid rgba(255,255,255,.12)}
-    .eyebrow{color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-weight:800; font-size:.9rem}
-    .hero-copy h1{font-size:clamp(2.2rem, 4.6vw, 3.4rem); line-height:1.12; margin:.35rem 0 1rem; letter-spacing:-.02em}
-    .lead{font-size:1.12rem; color:#f1f6ff}
-    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 6px}
-    .hero-points{display:flex; gap:10px; flex-wrap:wrap; padding:0; margin:10px 0 0; list-style:none}
-    .hero-points li{background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2); padding:8px 12px; border-radius:999px; font-weight:700; color:#eaf2ff}
-
-    /* TRUST */
-    .trust{background:rgba(0,0,0,.18); border-top:1px solid rgba(255,255,255,.14); border-bottom:1px solid rgba(255,255,255,.14)}
-    .trust-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; padding:14px 0}
-    @media (min-width: 760px){ .trust-grid{grid-template-columns:repeat(4,1fr)} }
-    .trust-item{color:#ffffff; text-align:center; font-weight:700; padding:8px 10px}
-    .trust-item span{display:block; font-size:1.1rem; opacity:.9}
-
-    /* SOBRE (fundo branco + detalhes azuis, texto preto) */
-    .sobre{background:#fff; color:var(--ink); padding:64px 0}
-    .sobre-grid{display:grid; grid-template-columns:1fr; gap:24px; align-items:start}
-    @media (min-width: 960px){ .sobre-grid{grid-template-columns:.9fr 1.1fr} }
-    .sobre-media img{border-radius:var(--radius); box-shadow:var(--shadow)}
-    .checklist{list-style:none; padding:0; margin:14px 0 0; display:grid; gap:8px}
-    .checklist li{padding-left:28px; position:relative}
-    .checklist li::before{content:"✔"; position:absolute; left:0; top:0; color:var(--brand); font-weight:800}
-
-    /* PROGRAMAS (cards azuis) */
-    .programas{padding:64px 0; background:var(--bg-deep); color:#fff; border-top:1px solid rgba(255,255,255,.14)}
-    .section-head{text-align:center; margin-bottom:28px}
-    .section-head h2{font-size:clamp(1.6rem,3vw,2.2rem); margin:0 0 6px}
-    .cards{display:grid; grid-template-columns:1fr; gap:18px}
-    @media (min-width: 960px){ .cards{grid-template-columns:repeat(2,1fr)} }
-    .card{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.2); border-radius:14px; padding:20px; box-shadow:var(--shadow)}
-    .card h3{margin:0 0 6px; color:#fff}
-    .card ul{margin:10px 0 14px; padding-left:18px}
-    .card li{margin:4px 0; color:#f1f6ff}
-
-    /* BENEFÍCIOS (branco com fotos + fallback) */
-    .beneficios{background:#fff; color:var(--ink); padding:64px 0; border-top:1px solid var(--line-dark); border-bottom:1px solid var(--line-dark)}
-    .beneficio{display:flex; gap:18px; align-items:center; background:#ffffff; border:1px solid var(--line-dark); padding:16px; border-radius:16px; box-shadow:0 8px 20px rgba(10,30,80,.08); margin-bottom:20px}
-    .beneficio:last-child{margin-bottom:0}
-    .beneficio img{flex-shrink:0; width:240px; height:160px; object-fit:cover; border-radius:12px; background:#f2f4f8; box-shadow:0 4px 12px rgba(0,0,0,.12)}
-    .beneficio img.fallback{filter:grayscale(1); opacity:.92}
-    .beneficio-copy h3{margin:0 0 8px; color:#0A2A6B}
-
-    @media (max-width: 720px){
-      .beneficio{flex-direction:column; align-items:flex-start}
-      .beneficio img{width:100%; height:auto}
+    .hero {
+      position: relative;
+      background: url("https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=1600&auto=format&fit=crop") center/cover no-repeat;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+      box-shadow: var(--shadow-xl);
     }
-
-    /* DEPOIMENTOS */
-    .depoimentos{background:linear-gradient(180deg, #f7fbff 0%, #ffffff 100%); padding:60px 0}
-    .quotes{display:grid; gap:16px}
-    .quote{margin:0; padding:16px; background:#fff; border:1px solid var(--line-dark); border-radius:12px; box-shadow:0 8px 20px rgba(10,30,80,.06)}
-    .quote blockquote{margin:0 0 8px}
-
-    /* AGENDAMENTO (azul forte inverso) */
-    .agendamento{background:var(--bg); color:#fff; padding:64px 0; text-align:center; border-top:1px solid rgba(255,255,255,.14)}
-    .agendamento .btn.primary{background:#fff; color:var(--bg)}
-
-    /* CTA WIDE (branco) */
-    .cta-wide{padding:64px 0; background:#fff}
-    .cta-wide-box{background:#fff; border:1px solid var(--line-dark); border-radius:16px; padding:28px; text-align:center; box-shadow:0 12px 28px rgba(10,30,80,.08)}
-    .cta-wide .btn.primary{background:var(--brand); color:#fff}
-
-    /* FOOTER (azul profundo) */
-    .site-footer{padding:28px 0; border-top:1px solid rgba(255,255,255,.14); background:var(--bg-deep); color:#d9e6ff}
-    .footer-grid{display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap}
-    .foot-brand{display:flex; gap:12px; align-items:center}
-    .site-footer .brand-mark{background:linear-gradient(135deg, var(--brand), #0e4fb3)}
-    .site-footer nav a{color:#eaf2ff; text-decoration:none; font-weight:700}
-    .site-footer nav a:hover{opacity:.9}
-
-    /* Responsivo menu */
-    @media (max-width: 920px){
-      .site-nav{display:none}
-      .site-nav.open{display:grid; gap:10px; position:absolute; left:20px; right:20px; top:90px; background:var(--bg); border:1px solid var(--line); border-radius:12px; padding:14px}
-      .nav-toggle{display:block}
+    .hero::after {
+      content:""; position:absolute; inset:0;
+      background: rgba(0,0,0,.55); /* overlay preto */
+      border-radius: 0 0 var(--radius-xl) var(--radius-xl);
     }
-
-    /* Acessibilidade */
-    :focus-visible{outline:2px solid var(--brand); outline-offset:2px; border-radius:6px}
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; color: #e5e5e5; }
   </style>
 </head>
 <body>
-  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    95% das vagas preenchidas — Garanta sua sessão de Constelação na Água agora
+  </div>
 
   <!-- HEADER -->
-  <header class="site-header" id="topo">
+  <header class="site-header">
     <div class="container">
-      <div class="brand">
-        <a href="#topo" aria-label="José Gabriel - Início">
-          <span class="brand-mark">JG</span>
-          <span class="brand-text">José&nbsp;Gabriel</span>
-        </a>
-      </div>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">☰</button>
-
-      <nav id="menu" class="site-nav" aria-label="Principal">
+      <div class="brand">JOSÉ GABRIEL</div>
+      <nav class="site-nav">
         <a href="#sobre">Sobre</a>
         <a href="#programas">Atendimentos</a>
         <a href="#beneficios">Benefícios</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#agendamento">Agendamento</a>
-        <a class="btn small contrast"
-           href="https://wa.me/5553999038427?text=Ol%C3%A1%20Jos%C3%A9%20Gabriel%2C%20vim%20do%20site."
-           target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#contato" class="btn white">Agendar</a>
       </nav>
     </div>
   </header>
 
-  <main id="conteudo">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-media">
-          <div class="photo-wrap">
-            <img src="assets/foto-hero.jpg" alt="José Gabriel conduzindo Constelação na Água" loading="eager" />
-          </div>
-        </div>
-        <div class="hero-copy">
-          <p class="eyebrow">Constelação na Água · Sessões Individuais</p>
-          <h1>Conversa que revela.<br/>Água que organiza.</h1>
-          <p class="lead">
-            Atendimentos com <strong>conversa sistêmica</strong> e <strong>músicas</strong> para expressar o que sente —
-            deixando a sessão mais <strong>fácil, honesta e verdadeira</strong>, em alinhamento com a vontade do Todo.
-          </p>
-          <div class="cta-row">
-            <a href="#sobre" class="btn ghost">Conhecer meu trabalho</a>
-            <a class="btn primary whatsapp"
-               href="https://wa.me/5553999038427?text=Quero%20agendar%20uma%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua%20individual."
-               target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-          <ul class="hero-points">
-            <li>Conversa sistêmica com linguagem simples</li>
-            <li>Músicas como recurso emocional</li>
-            <li>Plano prático após a sessão</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- TRUST STRIP -->
-      <div class="trust">
-        <div class="container trust-grid">
-          <div class="trust-item"><span>+6</span> anos de vivência</div>
-          <div class="trust-item"><span>1:1</span> atendimentos individuais</div>
-          <div class="trust-item"><span>Online</span> e presencial</div>
-          <div class="trust-item"><span>Plano</span> prático pós-sessão</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section class="sobre" id="sobre">
-      <div class="container sobre-grid">
-        <div class="sobre-media">
-          <img src="assets/ferramentas.jpg" alt="Ferramentas utilizadas nas sessões de Constelação na Água" loading="lazy"/>
-        </div>
-        <div class="sobre-copy">
-          <h2>Sobre mim</h2>
-          <p>Sou o José Gabriel. Conheci a <strong>Constelação Familiar há 6 anos</strong> e, desde 2019, vivo estudando e aplicando na minha própria vida. Nesse caminho, desenvolvi métodos diferenciados e mais eficientes para facilitar reconciliações e decisões com os pés no chão.</p>
-          <p>Hoje utilizo a <strong>Constelação na Água</strong> para a resolução de conflitos, sempre em alinhamento com a vontade do Todo. A sessão acontece com <strong>conversa sistêmica</strong> — direta e respeitosa — e, quando faz sentido, <strong>uso músicas</strong> para ajudar você a expor o que sente e dar nome às emoções. Isso torna o processo mais fácil, verdadeiro e transformador.</p>
-          <ul class="checklist">
-            <li>Espaço seguro e acolhedor</li>
-            <li>Olhar sistêmico com linguagem simples</li>
-            <li>Passos práticos para depois da sessão</li>
-          </ul>
-          <div class="cta-row">
-            <a href="#programas" class="btn">Ver atendimentos</a>
-            <a class="btn ghost whatsapp"
-               href="https://wa.me/5553999038427?text=Quero%20saber%20mais%20sobre%20a%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua%20individual."
-               target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROGRAMAS (Atendimentos) -->
-    <section class="programas" id="programas">
-      <div class="container">
-        <header class="section-head">
-          <h2>Atendimentos</h2>
-          <p>No momento, todos os atendimentos são <strong>individuais</strong>.</p>
-        </header>
-        <div class="cards">
-          <article class="card">
-            <h3>Constelação na Água (Individual)</h3>
-            <p>Sessão para olhar um tema específico com profundidade, usando conversa sistêmica e, quando útil, músicas.</p>
-            <ul>
-              <li>Duração de 60 a 90 minutos</li>
-              <li>Plano simples após a sessão</li>
-              <li>Online ou presencial</li>
-            </ul>
-            <a class="btn small whatsapp"
-               href="https://wa.me/5553999038427?text=Quero%20agendar%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua%20individual"
-               target="_blank" rel="noopener">Falar no WhatsApp</a>
-          </article>
-
-          <article class="card">
-            <h3>Acompanhamento Sistêmico (Individual)</h3>
-            <p>Série curta de encontros para sustentar mudanças após a constelação.</p>
-            <ul>
-              <li>Plano de 3 a 4 sessões</li>
-              <li>Check-ins por WhatsApp</li>
-              <li>Exercícios simples de integração</li>
-            </ul>
-            <a class="btn small whatsapp"
-               href="https://wa.me/5553999038427?text=Quero%20Acompanhamento%20Sist%C3%AAmico%20individual"
-               target="_blank" rel="noopener">Falar no WhatsApp</a>
-          </article>
-
-          <article class="card">
-            <h3>Processo na Água (Individual)</h3>
-            <p>Prática simbólica para fechamento de ciclos e novos começos, conduzida com respeito e direção.</p>
-            <ul>
-              <li>Definição de intenção clara</li>
-              <li>Passos de cuidado após o processo</li>
-              <li>Disponível online e presencial</li>
-            </ul>
-            <a class="btn small whatsapp"
-               href="https://wa.me/5553999038427?text=Quero%20saber%20sobre%20o%20Processo%20na%20%C3%81gua%20individual"
-               target="_blank" rel="noopener">Falar no WhatsApp</a>
-          </article>
-
-          <article class="card">
-            <h3>Clareza e Direção</h3>
-            <p>Encontro de 45 minutos para organizar pensamentos, alinhar intenções e dar o primeiro passo.</p>
-            <ul>
-              <li>Conversa sistêmica</li>
-              <li>Orientação prática</li>
-              <li>Atendimento online</li>
-            </ul>
-            <a class="btn small whatsapp"
-               href="https://wa.me/5553999038427?text=Quero%20agendar%20uma%20sess%C3%A3o%20de%20Clareza%20e%20Dire%C3%A7%C3%A3o"
-               target="_blank" rel="noopener">Falar no WhatsApp</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- BENEFÍCIOS (com fallback nas imagens) -->
-    <section class="beneficios" id="beneficios">
-      <div class="container">
-        <header class="section-head">
-          <h2>Alguns benefícios da constelação</h2>
-          <p>Processos conduzidos com respeito e resultado.</p>
-        </header>
-
-        <div class="beneficio">
-          <img
-            src="assets/beneficio-1.jpg"
-            alt="Relacionamentos mais saudáveis"
-            loading="lazy"
-            onerror="this.onerror=null; this.src='assets/ferramentas.jpg'; this.classList.add('fallback');"
-          >
-          <div class="beneficio-copy">
-            <h3>Relacionamentos mais saudáveis</h3>
-            <p>A constelação identifica a raiz de conflitos e desequilíbrios nas suas conexões — amorosas, familiares ou profissionais — criando um caminho claro para a resolução e a cura emocional.</p>
-          </div>
-        </div>
-
-        <div class="beneficio">
-          <img
-            src="assets/beneficio-2.jpg"
-            alt="Desafios profissionais e financeiros"
-            loading="lazy"
-            onerror="this.onerror=null; this.src='assets/ferramentas.jpg'; this.classList.add('fallback');"
-          >
-          <div class="beneficio-copy">
-            <h3>Desafios profissionais e financeiros</h3>
-            <p>Ao transformar padrões de comportamento limitantes, você ganha clareza e força para superar insegurança, conflitos e estagnação. Abre-se espaço para prosperar e reorganizar sua relação com o dinheiro.</p>
-          </div>
-        </div>
-
-        <div class="beneficio">
-          <img
-            src="assets/beneficio-3.jpg"
-            alt="Saúde e bem-estar"
-            loading="lazy"
-            onerror="this.onerror=null; this.src='assets/ferramentas.jpg'; this.classList.add('fallback');"
-          >
-          <div class="beneficio-copy">
-            <h3>Saúde e bem-estar</h3>
-            <p>A constelação oferece um olhar sistêmico para saúde, revelando conexões entre dinâmicas familiares e questões físicas ou emocionais. Com mais consciência, você escolhe cuidados e limites que te fazem bem.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DEPOIMENTOS -->
-    <section class="depoimentos" id="depoimentos">
-      <div class="container">
-        <header class="section-head">
-          <h2>Depoimentos reais</h2>
-          <p>Resultados que tocam e organizam.</p>
-        </header>
-        <div class="quotes">
-          <figure class="quote">
-            <blockquote>“A sessão na água me trouxe uma paz que eu não sentia há anos.”</blockquote>
-            <figcaption>— Mariana L.</figcaption>
-          </figure>
-          <figure class="quote">
-            <blockquote>“As músicas me ajudaram a falar o que eu realmente sentia.”</blockquote>
-            <figcaption>— Rafael M.</figcaption>
-          </figure>
-          <figure class="quote">
-            <blockquote>“Saí com clareza e um passo a passo simples pra seguir.”</blockquote>
-            <figcaption>— Camila T.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- AGENDAMENTO -->
-    <section class="agendamento" id="agendamento">
-      <div class="container narrow">
-        <h2>Como funciona o agendamento</h2>
-        <p><strong>Você está pronto(a) para explorar camadas ocultas da sua vida?</strong></p>
-        <p>Eu estou aqui para te guiar nessa jornada de autoconhecimento e transformação.</p>
-        <p><strong>Ofereço uma consulta online de diagnóstico gratuita</strong> para avaliarmos sua necessidade e entender se a constelação é o caminho certo para você agora.</p>
-        <p>👉 Responda a algumas perguntas e eu entro em contato para combinarmos sua sessão.</p>
-
-        <div class="cta-row" style="justify-content:center;">
-          <a class="btn primary whatsapp"
-             href="https://wa.me/5553999038427?text=Quero%20a%20consulta%20de%20diagn%C3%A9stico%20gratuita"
-             target="_blank" rel="noopener">Pedir diagnóstico gratuito</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA WIDE -->
-    <section class="cta-wide">
-      <div class="container">
-        <div class="cta-wide-box">
-          <h2>Vamos começar</h2>
-          <p>Fala comigo no WhatsApp: combinamos o tema, alinhamos expectativas e marcamos a sua sessão individual.</p>
-          <a class="btn primary whatsapp"
-             href="https://wa.me/5553999038427?text=Quero%20come%C3%A7ar%20minha%20Constela%C3%A7%C3%A3o%20na%20%C3%81gua%20individual"
-             target="_blank" rel="noopener">Chamar no WhatsApp</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="foot-brand">
-        <div class="brand-mark">JG</div>
-        <p>© <span id="year"></span> José Gabriel. Todos os direitos reservados.</p>
-      </div>
-      <nav aria-label="Rodapé">
-        <a href="#sobre">Sobre</a>
-        <a href="#programas">Atendimentos</a>
-        <a href="#beneficios">Benefícios</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#agendamento">Agendamento</a>
-      </nav>
-      <div class="legal">
-        <a id="privacidade" href="#">Aviso de Privacidade</a>
-      </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Conversa que revela.<br>Água que organiza.</h1>
+      <p>Constelação na Água com conversa sistêmica e música para abrir espaço a mudanças reais.</p>
+      <a href="https://wa.me/5553999038427?text=Quero%20agendar%20minha%20sess%C3%A3o" class="btn white">Agendar agora</a>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // ano rodapé
-    const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
-
-    // menu mobile
-    const btn = document.querySelector('.nav-toggle');
-    const menu = document.getElementById('menu');
-    if (btn && menu){
-      btn.addEventListener('click', () => {
-        const open = menu.classList.toggle('open');
-        btn.setAttribute('aria-expanded', String(open));
-      });
-    }
-  </script>
 </body>
 </html>
