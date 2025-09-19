@@ -32,35 +32,28 @@
       font-weight: 600;
     }
 
-    /* HEADER */
-    .site-header {
-      background: var(--black);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .site-header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 72px;
-    }
-    .logo {
-      font-weight: 800;
-      font-size: 1.4rem;
-      color: var(--white);
-      background: var(--blue);
-      padding: 6px 14px;
-      border-radius: 8px;
-      letter-spacing: .05em;
-    }
-    .site-nav { display: flex; gap: 24px; align-items: center; }
-    .site-nav a {
-      color: var(--white);
-      font-weight: 600;
-      font-size: .95rem;
-      text-decoration: none;
-      transition: .3s;
-    }
-    .site-nav a:hover { color: var(--blue); }
+     <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">JG</div>
+      <nav class="site-nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#programas">Atendimentos</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#contato" class="btn blue">Agendar</a>
+      </nav>
+    </div>
+
+    <!-- INDICADORES -->
+    <div class="indicadores">
+      <div class="container indicadores-grid">
+        <div><span>+6</span> anos de trabalho</div>
+        <div><span>+300</span> pessoas envolvidas</div>
+        <div><span>✓</span> métodos criados e validados</div>
+      </div>
+    </div>
+  </header>
+
 
     /* BOTÕES */
     .btn {
