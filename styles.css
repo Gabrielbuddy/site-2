@@ -122,3 +122,34 @@ img{max-width:100%; display:block}
 
 /* Acessibilidade */
 :focus-visible{outline:2px solid var(--brand); outline-offset:2px; border-radius:6px}
+
+
+    /* INDICADORES */
+    .indicadores {
+      background: var(--black);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 12px 0;
+    }
+    .indicadores-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      text-align: center;
+      font-size: .95rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .indicadores-grid span {
+      color: var(--blue);
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-right: 6px;
+    }
+    @media(max-width:700px){
+      .indicadores-grid {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
