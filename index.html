@@ -43,19 +43,44 @@
       align-items: center;
       height: 72px;
     }
-    .brand { font-weight: 800; font-size: 1.1rem; letter-spacing: .05em; }
-    .site-nav { display: flex; gap: 24px; align-items: center; }
-    .site-nav a { color: var(--white); font-weight: 600; font-size: .95rem; }
 
+    /* LOGO JG */
+    .logo {
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--white);
+      background: var(--blue);
+      padding: 6px 14px;
+      border-radius: 8px;
+      letter-spacing: .05em;
+    }
+
+    .site-nav { display: flex; gap: 24px; align-items: center; }
+    .site-nav a {
+      color: var(--white);
+      font-weight: 600;
+      font-size: .95rem;
+      text-decoration: none;
+      transition: .3s;
+    }
+    .site-nav a:hover { color: var(--blue); }
+
+    /* BOTÕES */
     .btn {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 10px 22px;
       border-radius: 30px;
       font-weight: 700;
       transition: .3s;
+      text-decoration: none;
     }
-    .btn.white { background: var(--white); color: var(--blue); }
-    .btn.white:hover { background: var(--blue); color: var(--white); }
+    .btn.blue {
+      background: var(--blue);
+      color: var(--white);
+    }
+    .btn.blue:hover {
+      background: #0841aa;
+    }
 
     /* HERO */
     .hero {
@@ -98,12 +123,12 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container">
-      <div class="brand">JOSÉ GABRIEL</div>
+      <div class="logo">JG</div>
       <nav class="site-nav">
         <a href="#sobre">Sobre</a>
         <a href="#programas">Atendimentos</a>
         <a href="#beneficios">Benefícios</a>
-        <a href="#contato" class="btn white">Agendar</a>
+        <a href="#contato" class="btn blue">Agendar</a>
       </nav>
     </div>
   </header>
@@ -113,7 +138,7 @@
     <div class="container hero-content">
       <h1>Unindo pessoas, revelando caminhos</h1>
       <p>Constelação na Água para clareza, resolução de conflitos e motivação em sua jornada.</p>
-      <a href="https://wa.me/5553999038427?text=Quero%20agendar%20minha%20sess%C3%A3o" class="btn white">Agendar agora</a>
+      <a href="https://wa.me/5553999038427?text=Quero%20agendar%20minha%20sess%C3%A3o" class="btn blue">Agendar agora</a>
     </div>
   </section>
 
